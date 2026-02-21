@@ -20,40 +20,41 @@ body.modal-open {
     padding-right: 0 !important;
 }
 
-/* ===== Graphik fonts (локальные пути) ===== */
+/* ===== Graphik fonts (ТОЛЬКО локальные файлы) ===== */
 @font-face {
     font-family: 'Graphik';
-    src: url('./Graphik-Regular.woff2') format('woff2'),
-         url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
+    src: url('./Graphik-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: 'Graphik';
-    src: url('./Graphik-Medium.woff2') format('woff2'),
-         url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
+    src: url('./Graphik-Medium.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: 'Graphik';
-    src: url('./Graphik-Semibold.woff2') format('woff2'),
-         url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
+    src: url('./Graphik-Semibold.woff2') format('woff2');
     font-weight: 600;
     font-display: swap;
 }
 @font-face {
     font-family: 'Graphik';
-    src: url('./Graphik-Black.woff2') format('woff2'),
-         url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
+    src: url('./Graphik-Black.woff2') format('woff2');
     font-weight: 900;
     font-display: swap;
 }
 
-/* ===== ВАЖНО: fallback стек для iOS ===== */
+/* ===== ВАЖНО: iOS Safari настройки ===== */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Graphik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
     font-weight: 400 !important;
+    font-synthesis: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
