@@ -8,20 +8,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="alternate" hreflang="ru" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="uk" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="en" href="https://funpay.com/en/account/balance"><link rel="alternate" hreflang="x-default" href="https://funpay.com/en/account/balance"><script type="application/ld+json">[{"@context":"http:\/\/schema.org\/","@type":"WebSite","name":"FunPay","url":"https:\/\/funpay.com\/"}]</script><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Regular-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Medium-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="manifest" href="https://funpay.com/manifest.json">
 <style>
+    /* layout tweaks */
     html, body {
         overflow: auto !important;
         height: auto !important;
     }
-    
+
     body.modal-open {
         overflow: auto !important;
         padding-right: 0 !important;
     }
-    .modal-title {
-        font-weight: 900 !important;
-        font-family: "Graphik-Black", "Graphik", "Graphik-Black-Web", sans-serif !important;
+
+    /* Load Graphik font-family with proper weights (use absolute URLs so saved pages / GitHub Pages load them)
+       Moved here from inside <script> so browsers (including iOS Safari) will correctly parse @font-face */
+    @font-face {
+        font-family: 'Graphik';
+        src: url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Graphik';
+        src: url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Graphik';
+        src: url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Graphik';
+        src: url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    /* sensible default for body to avoid iOS falling back to a heavier system face */
+    body {
+        font-family: 'Graphik', sans-serif;
+        font-weight: 400;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+
+    .modal-title {
+        font-weight: 900 !important;
+        font-family: "Graphik", "Graphik-Black", "Graphik-Black-Web", sans-serif !important;
     }
 </style>
 </head>
@@ -31,20 +70,7 @@
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-        @font-face {
-            font-family: 'Graphik Black';
-            src: local('Graphik Black'), local('Graphik-Black'), url('Graphik-Black.woff2') format('woff2');
-            font-weight: 900;
-            font-style: normal;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Graphik-Black';
-            src: local('Graphik Black'), local('Graphik-Black'), url('Graphik-Black.woff2') format('woff2');
-            font-weight: 900;
-            font-style: normal;
-            font-display: swap;
-        }
+    /* @font-face rules moved to <style> in head so browsers (Safari/iOS) will load them correctly */
     function initYM() {
         ym(36956765, "init", {
             clickmap: false,
