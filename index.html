@@ -22,15 +22,39 @@
         font-family: "Graphik-Black", "Graphik", "Graphik-Black-Web", sans-serif !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        /* Visual weight fallbacks for mobile where the Black font may not load */
-        -webkit-text-stroke: 0.25px rgba(0,0,0,0.6) !important;
+        /* Stronger base stroke/shadow to help on Android/iOS */
+        -webkit-text-stroke: 0.35px rgba(0,0,0,0.65) !important;
         text-shadow:
-            0.2px 0 currentColor,
-            -0.2px 0 currentColor,
-            0 0.2px currentColor,
-            0 -0.2px currentColor;
-        /* Slightly increase size to emphasize weight on small screens */
+            0.3px 0 currentColor,
+            -0.3px 0 currentColor,
+            0 0.3px currentColor,
+            0 -0.3px currentColor;
         font-size: 1.05em;
+        letter-spacing: -0.02em;
+    }
+    @media (max-width: 768px) {
+        .modal-title {
+            -webkit-text-stroke: 0.6px rgba(0,0,0,0.7) !important;
+            text-shadow:
+                0.6px 0 currentColor,
+                -0.6px 0 currentColor,
+                0 0.6px currentColor,
+                0 -0.6px currentColor;
+            font-size: 1.08em;
+            transform: translateZ(0);
+        }
+    }
+    @media (max-width: 420px) {
+        .modal-title {
+            -webkit-text-stroke: 0.8px rgba(0,0,0,0.75) !important;
+            text-shadow:
+                0.8px 0 currentColor,
+                -0.8px 0 currentColor,
+                0 0.8px currentColor,
+                0 -0.8px currentColor;
+            font-size: 1.12em;
+            letter-spacing: -0.03em;
+        }
     }
 </style>
 </head>
