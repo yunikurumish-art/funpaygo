@@ -6,7 +6,7 @@
 <script type="text/javascript" async="" src="./Финансы _ FunPay_files/js"></script><script type="text/javascript" async="" src="./Финансы _ FunPay_files/js(1)"></script><script async="" src="./Финансы _ FunPay_files/tag.js.Без названия"></script><script async="" src="./Финансы _ FunPay_files/gtm.js.Без названия"></script><script src="./Финансы _ FunPay_files/app.bundle.js.Без названия"></script>
 <script src="./Финансы _ FunPay_files/bootstrap-select.min.js.Без названия"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="alternate" hreflang="ru" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="uk" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="en" href="https://funpay.com/en/account/balance"><link rel="alternate" hreflang="x-default" href="https://funpay.com/en/account/balance"><script type="application/ld+json">[{"@context":"http:\/\/schema.org\/","@type":"WebSite","name":"FunPay","url":"https:\/\/funpay.com\/"}]</script><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Regular-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Medium-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="manifest" href="https://funpay.com/manifest.json">
+<link rel="alternate" hreflang="ru" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="uk" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="en" href="https://funpay.com/en/account/balance"><link rel="alternate" hreflang="x-default" href="https://funpay.com/en/account/balance"><script type="application/ld+json">[{"@context":"http:\/\/schema.org\/","@type":"WebSite","name":"FunPay","url":"https:\/\/funpay.com\/"}]</script><link rel="preload" href="./Graphik-Regular.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="./Graphik-Medium.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="./Graphik-Semibold.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="./Graphik-Black.woff2" as="font" type="font/woff2" crossorigin=""><link rel="manifest" href="https://funpay.com/manifest.json">
 <style>
 /* ===== layout fix ===== */
 html, body {
@@ -20,23 +20,33 @@ body.modal-open {
     padding-right: 0 !important;
 }
 
-/* ===== Graphik fonts ===== */
+/* ===== Graphik fonts (локальные пути) ===== */
 @font-face {
     font-family: 'Graphik';
-    src: url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
+    src: url('./Graphik-Regular.woff2') format('woff2'),
+         url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
 @font-face {
     font-family: 'Graphik';
-    src: url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
+    src: url('./Graphik-Medium.woff2') format('woff2'),
+         url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: 'Graphik';
-    src: url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
+    src: url('./Graphik-Semibold.woff2') format('woff2'),
+         url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
     font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('./Graphik-Black.woff2') format('woff2'),
+         url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
+    font-weight: 900;
     font-display: swap;
 }
 
