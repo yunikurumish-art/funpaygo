@@ -17,47 +17,20 @@
         overflow: auto !important;
         padding-right: 0 !important;
     }
-    @font-face {
-        font-family: 'Graphik Black';
-        src: local('Graphik Black'), local('Graphik-Black'), url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: 'Graphik-Black';
-        src: local('Graphik Black'), local('Graphik-Black'), url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-    }
-
     .modal-title {
-        font-family: 'Graphik Black', 'Graphik-Black', 'Graphik', sans-serif !important;
         font-weight: 900 !important;
-        color: #000 !important;
-        -webkit-text-stroke: 0 !important;
-        text-shadow: none !important;
-        -webkit-font-smoothing: subpixel-antialiased !important;
-        -moz-osx-font-smoothing: auto !important;
+        font-family: "Graphik-Black", "Graphik", "Graphik-Black-Web", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* Visual weight fallbacks for mobile where the Black font may not load */
+        -webkit-text-stroke: 0.25px rgba(0,0,0,0.6) !important;
+        text-shadow:
+            0.2px 0 currentColor,
+            -0.2px 0 currentColor,
+            0 0.2px currentColor,
+            0 -0.2px currentColor;
+        /* Slightly increase size to emphasize weight on small screens */
         font-size: 1.05em;
-        letter-spacing: 0 !important;
-    }
-    @media (max-width: 768px) {
-        .modal-title {
-            font-size: 1.08em;
-            -webkit-text-stroke: 0 !important;
-            text-shadow: none !important;
-            letter-spacing: 0 !important;
-        }
-    }
-    @media (max-width: 420px) {
-        .modal-title {
-            font-size: 1.12em;
-            -webkit-text-stroke: 0 !important;
-            text-shadow: none !important;
-            letter-spacing: 0 !important;
-        }
     }
 </style>
 </head>
