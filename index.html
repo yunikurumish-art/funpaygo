@@ -8,60 +8,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="alternate" hreflang="ru" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="uk" href="https://funpay.com/account/balance"><link rel="alternate" hreflang="en" href="https://funpay.com/en/account/balance"><link rel="alternate" hreflang="x-default" href="https://funpay.com/en/account/balance"><script type="application/ld+json">[{"@context":"http:\/\/schema.org\/","@type":"WebSite","name":"FunPay","url":"https:\/\/funpay.com\/"}]</script><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Regular-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Medium-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://funpay.com/702/fonts/Graphik-Black-Web.woff2" as="font" type="font/woff2" crossorigin=""><link rel="manifest" href="https://funpay.com/manifest.json">
 <style>
-    /* layout tweaks */
-    html, body {
-        overflow: auto !important;
-        height: auto !important;
-    }
+/* ===== layout fix ===== */
+html, body {
+    overflow: auto !important;
+    height: auto !important;
+}
 
-    body.modal-open {
-        overflow: auto !important;
-        padding-right: 0 !important;
-    }
+/* iOS Safari текст становится жирным если modal-open */
+body.modal-open {
+    overflow: auto !important;
+    padding-right: 0 !important;
+}
 
-    /* Load Graphik font-family with proper weights (use absolute URLs so saved pages / GitHub Pages load them)
-       Moved here from inside <script> so browsers (including iOS Safari) will correctly parse @font-face */
-    @font-face {
-        font-family: 'Graphik';
-        src: url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: 'Graphik';
-        src: url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: 'Graphik';
-        src: url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-    }
-    @font-face {
-        font-family: 'Graphik';
-        src: url('https://funpay.com/702/fonts/Graphik-Black-Web.woff2') format('woff2');
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-    }
+/* ===== Graphik fonts ===== */
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://funpay.com/702/fonts/Graphik-Regular-Web.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://funpay.com/702/fonts/Graphik-Medium-Web.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://funpay.com/702/fonts/Graphik-Semibold-Web.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
 
-    /* sensible default for body to avoid iOS falling back to a heavier system face */
-    body {
-        font-family: 'Graphik', sans-serif;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+/* ===== ВАЖНО: fallback стек для iOS ===== */
+body {
+    font-family: 'Graphik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+    font-weight: 400 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-    .modal-title {
-        font-weight: 900 !important;
-        font-family: "Graphik", "Graphik-Black", "Graphik-Black-Web", sans-serif !important;
-    }
+/* убираем ультра жирный вес */
+.modal-title {
+    font-weight: 600 !important;
+}
+
+/* иногда bootstrap делает текст жирным */
+.navbar,
+.tc-item,
+.tc-title,
+.tc-status {
+    font-weight: 400 !important;
+}
 </style>
 </head>
 <body data-app-data="{&quot;locale&quot;:&quot;ru&quot;,&quot;csrf-token&quot;:&quot;ol5eqlg3b29zv4sy&quot;,&quot;userId&quot;:6805187,&quot;webpush&quot;:{&quot;app&quot;:&quot;C356D-32008&quot;}}" class="modal-open" style="padding-right: 15px;">
